@@ -1,0 +1,270 @@
+.footer {
+    background-color: #464C55;
+
+    &__navigation {
+        padding-top: 50px;
+        padding-bottom: 93px;
+        display: flex;
+        gap: 40px;
+    }
+
+    .column {
+        width: 160px;
+
+        &__texts {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        &__title {
+            margin-top: 0;
+            margin-bottom: 10px;
+            color: #FFF;
+            font-family: 'Nunito';
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 26px;
+        }
+
+        &__text {
+            margin: 0;
+            color: #FFF;
+            font-family: 'Nunito';
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 26px;
+            opacity: 0.7;
+            text-decoration: none;
+            transition: 0.3s;
+
+            &:hover {
+                opacity: 0.9;
+            }
+        }
+    }
+
+    .about {
+        display: flex;
+        flex-direction: column;
+        margin-left: 38px;
+
+        &__available {
+            display: flex;
+            gap: 5px;
+        }
+
+        &__number {
+            margin-top: 29px;
+            margin-bottom: 6px;
+            color: #FFF;
+            text-align: right;
+            text-decoration: none;
+            font-family: 'Nunito';
+            font-size: 26px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 26px;
+            /* 100% */
+        }
+
+        &__call {
+            margin: 0;
+            margin-bottom: 26px;
+            color: #FFF;
+            text-align: right;
+            font-family: 'Nunito';
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            opacity: 0.5;
+        }
+
+        &__mail {
+            margin: 0;
+            color: #FFF;
+            text-align: right;
+            font-family: 'Nunito';
+            text-decoration: none;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            opacity: 0.9;
+        }
+    }
+
+    .pizzerias {
+        display: flex;
+        gap: 156px;
+        padding-bottom: 40px;
+    }
+
+    .revenue {
+        display: flex;
+        flex-direction: column;
+
+        &__money {
+            margin: 0;
+            margin-bottom: 12px;
+            color: #FFF;
+            font-family: 'Nunito';
+            font-size: 26px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 26px;
+        }
+
+        &__text {
+            margin: 0;
+            color: #FFF;
+            font-family: 'Nunito';
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 22px;
+            opacity: 0.7;
+        }
+    }
+
+    .countries {
+        display: flex;
+        flex-direction: column;
+
+        &__text {
+            margin: 0;
+            margin-bottom: 12px;
+            color: #FFF;
+            font-family: 'Nunito';
+            font-size: 26px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 26px;
+        }
+
+        &__subtext {
+            margin: 0;
+            color: #FFF;
+            font-family: 'Nunito';
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 22px;
+            opacity: 0.7;
+        }
+    }
+
+    &__hr {
+        margin: 0;
+        opacity: 0.2;
+        background: #FFF;
+        border: 0;
+        height: 1px;
+    }
+
+    &__help {
+        display: flex;
+        align-items: center;
+    }
+
+    .help {
+        padding-top: 40px;
+        padding-bottom: 36px;
+
+        &__copyright {
+            margin: 0;
+            color: #FFF;
+            font-family: 'Nunito';
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 22px;
+            opacity: 0.7;
+            margin-left: 28.39px;
+            margin-right: 64px;
+        }
+
+        &__mainblock {
+            display: flex;
+        }
+
+        &__information {
+            margin: 0;
+            color: #FFF;
+            font-family: 'Nunito';
+            font-size: 16px;
+            text-decoration: none;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 22px;
+            opacity: 0.7;
+            margin-right: 14px;
+            transition: 0.3s;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+
+        &__composition {
+            margin: 0;
+            color: #FFF;
+            font-family: 'Nunito';
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            text-decoration: none;
+            line-height: 22px;
+            opacity: 0.9;
+            margin-right: 17px;
+            transition: 0.3s;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+
+        &__assist {
+            margin: 0;
+            color: #FFF;
+            font-family: 'Nunito';
+            text-decoration: none;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 22px;
+            opacity: 0.7;
+            margin-right: 93px;
+            transition: 0.3s;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+
+    }
+
+    .media {
+        display: flex;
+        gap: 6px;
+        align-items: center;
+
+        &__img {
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+            background: rgba(255, 255, 255, 0.3);
+            transition: 0.3s;
+
+            &:hover {
+                background: rgba(255, 255, 255, 0.5);
+            }
+        }
+    }
+}

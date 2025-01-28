@@ -1,0 +1,74 @@
+.drinks {
+    padding-top: 70px;
+
+    &__title {
+        margin: 0;
+        color: #000;
+        font-family: 'Nunito';
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    &__cards {
+        padding-top: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding-bottom: 134px;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        max-width: 250px;
+        height: 387px;
+
+        &__img {
+            margin: 4% 0 0 4%;
+            width: 220px;
+            height: 220px;
+        }
+
+        &__title {
+            color: #000;
+            font-family: 'Nunito';
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+
+        &__composition {
+            color: #73798C;
+            font-family: 'Nunito';
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            margin: 0;
+        }
+
+        &__price {
+            color: #000;
+            font-family: 'Nunito';
+            font-size: 16px;
+            font-style: normal;
+            margin: 0;
+            font-weight: 600;
+            line-height: normal;
+        }
+
+        &__buy {
+            margin: 0;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: auto;
+        }
+    }
+}

@@ -1,0 +1,110 @@
+.header {
+    padding-top: 25px;
+    padding-bottom: 30px;
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 31px;
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .logo {
+        display: flex;
+    
+        &__img {
+            cursor: pointer;
+            margin-right: 14.67px;
+            width: 42.328px;
+            height: 44px;
+            flex-shrink: 0;
+        }
+    
+        &__names {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    
+    .names {
+        &__title {
+            cursor: pointer;
+        }
+    
+        &__subtitle {
+            margin: 0;
+            margin-top: 7px;
+            color: #343434;
+            font-family: 'Nunito';
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+    }
+    
+    .contact {
+        display: flex;
+        flex-direction: column;
+    
+        &__number {
+            margin: 0;
+            color: #000;
+            font-family: 'Nunito';
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+    
+        &__text {
+            margin: 0;
+            color: #999;
+            font-family: 'Nunito';
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+    }
+    
+    .navigation {
+        display: flex;
+        justify-content: space-between;
+    
+        &__ul {
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 24px;
+        }
+    }
+    
+    .ul {
+        
+        li {
+            list-style-type: none;
+        }
+    
+        &__text {
+            text-decoration: none;
+            color: #000;
+            font-family: 'Nunito';
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            transition: 0.25s;
+    
+            &:hover {
+                color: #F96900;
+            }
+        }
+    }
+}
+

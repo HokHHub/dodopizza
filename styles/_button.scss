@@ -1,0 +1,72 @@
+.button {
+    cursor: pointer;
+    border-radius: 1000px;
+    background: #F96900;
+    color: #FFF;
+    text-align: center;
+    font-family: 'Nunito';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    border: 0;
+    padding: 9px 20px 9px 18px;
+    transition-duration: 200ms;
+    transition-timing-function: ease-out;
+
+    &:hover {
+        background: #ED5D08;
+    }
+
+    &_select {
+        cursor: pointer;
+        border: 0;
+        background: #FFF0E6;
+        color: #D15700;
+        padding: 9px 22px 9px 21px;
+        transition: 0.25s;
+        text-align: center;
+        font-family: 'Nunito';
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        border-radius: 1000px;
+
+        &:hover {
+            color: #D55406;
+            background: #FFD0B2;
+        }
+    }
+}
+
+.tns-nav {
+    opacity: 0;
+    position: absolute;
+    display: flex;
+    left: 50%;
+    z-index: 10;
+    gap: 8px;
+    bottom: 17px;
+    transform: translateX(-50%);
+    transition: 0.3s;
+
+    button {
+        width: 12px;
+        height: 12px;
+        flex-shrink: 0;
+        border-radius: 12px;
+        border: 0;
+        background: #554D4A;
+    }
+
+    &-active {
+        background: #C3C9CD !important;
+    }
+}
+
+.tns-outer {
+    &:hover .tns-nav{
+        opacity: 1;
+    }
+}

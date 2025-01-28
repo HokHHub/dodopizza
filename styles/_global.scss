@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'Nunito';
+    src: url('/fonts/Nunito.ttf');
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+}
+
