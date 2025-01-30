@@ -1,13 +1,30 @@
 import { data } from './data.js'
+import { tns } from "./node_modules/tiny-slider/src/tiny-slider.js"
+
 let pizzaCards = document.querySelector('.pizza__cards')
 let comboCards = document.querySelector('.combo__cards')
 let snacksCards = document.querySelector('.snacks__cards')
 let dessertsCards = document.querySelector('.desserts__cards')
 let drinksCards = document.querySelector('.drinks__cards')
+let popularCards = document.querySelector('.popular__products')
 let yearNow = document.querySelector('.help__copyright')
-let sliderChange = document.querySelectorAll('.slider__dot')
-// let slider = document.querySelector('.slider__all')
-import { tns } from "./node_modules/tiny-slider/src/tiny-slider.js"
+
+function RenderPopular() {
+    for (let index = 0; index < data.popular.length; index++) {
+        let card = document.createElement('article')
+        card.classList.add('products__card')
+        card.classList.add('card')
+        card.innerHTML = `<img class="card__img" src="${data.popular[index].img}" alt="${data.popular[index].name}">
+                        <div class="card__info">
+                            <p class="card__name">${data.popular[index].name}</p>
+                            <p class="card__price">от ${data.popular[index].price} ₽</p>
+                        </div>
+                        `
+
+        popularCards.appendChild(card)
+    }
+}
+RenderPopular()
 
 function RenderPizzas() {
 
@@ -16,11 +33,13 @@ function RenderPizzas() {
         card.classList.add('pizza__card')
         card.classList.add('card')
         card.innerHTML = `<img class="card__img" src="${data.pizza[index].img}" alt="${data.pizza[index].name}">
+                        <div class="card__mobile">
                         <p class="card__title">${data.pizza[index].name}</p>
                         <p class="card__composition">${data.pizza[index].composition}</p>
                         <div class="card__buy">
                             <p class="card__price">от ${data.pizza[index]['minimal-price']} ₽</p>
                             <button class="card__button button_select">Выбрать</button>
+                        </div>
                         </div>`
 
         pizzaCards.appendChild(card)
@@ -35,11 +54,13 @@ function RenderCombo() {
         card.classList.add('combo__card')
         card.classList.add('card')
         card.innerHTML = `<img class="card__img" src="${data.combo[index].img}" alt="${data.combo[index].name}">
+                        <div class="card__mobile">
                         <p class="card__title">${data.combo[index].name}</p>
                         <p class="card__composition">${data.combo[index].description}</p>
                         <div class="card__buy">
                             <p class="card__price">${data.combo[index]['price']} ₽</p>
                             <button class="card__button button_select">Выбрать</button>
+                        </div>
                         </div>`
 
         comboCards.appendChild(card)
@@ -53,12 +74,15 @@ function RenderSnacks() {
         card.classList.add('snacks__card')
         card.classList.add('card')
         card.innerHTML = `<img class="card__img" src="${data.snacks[index].img}" alt="${data.snacks[index].name}">
+                        <div class="card__mobile">
                         <p class="card__title">${data.snacks[index].name}</p>
                         <p class="card__composition">${data.snacks[index].description}</p>
                         <div class="card__buy">
                             <p class="card__price">${data.snacks[index]['price']} ₽</p>
                             <button class="card__button button_select">Выбрать</button>
-                        </div>`
+                        </div>
+                        </div>
+                        `
 
         snacksCards.appendChild(card)
     }
@@ -71,11 +95,13 @@ function RenderDesserts() {
         card.classList.add('desserts__card')
         card.classList.add('card')
         card.innerHTML = `<img class="card__img" src="${data.desserts[index].img}" alt="${data.desserts[index].name}">
+                        <div class="card__mobile">
                         <p class="card__title">${data.desserts[index].name}</p>
                         <p class="card__composition">${data.desserts[index].description}</p>
                         <div class="card__buy">
                             <p class="card__price">${data.desserts[index]['price']} ₽</p>
                             <button class="card__button button_select">Выбрать</button>
+                        </div>
                         </div>`
 
         dessertsCards.appendChild(card)
@@ -89,11 +115,13 @@ function RenderDrinks() {
         card.classList.add('drinks__card')
         card.classList.add('card')
         card.innerHTML = `<img class="card__img" src="${data.drinks[index].img}" alt="${data.drinks[index].name}">
+                        <div class="card__mobile">
                         <p class="card__title">${data.drinks[index].name}</p>
                         <p class="card__composition">${data.drinks[index].description}</p>
                         <div class="card__buy">
                             <p class="card__price">${data.drinks[index]['price']} ₽</p>
                             <button class="card__button button_select">Выбрать</button>
+                        </div>
                         </div>`
 
         drinksCards.appendChild(card)
@@ -105,20 +133,30 @@ yearNow.innerText = '© ' + new Date().getFullYear()
 for (let index = 0; index < data.slider.length; index++) {
     let img = document.createElement('div')
     let slider = document.querySelector('.slider__all')
-    img.innerHTML = `<img src="${data.slider[index].img}" alt="">`
+    img.innerHTML = `<img class="slider__img" src="${data.slider[index].img}" alt="">`
     slider.appendChild(img)
 
 }
 
+
 let slider = tns({
     items: 3,
     controls: false,
-    center: true,
     gutter: 30,
+    responsive: {
+        0: {
+            gutter: 10
+        },
+        800: {
+            gutter: 20
+        },
+        1000: {
+            gutter: 30
+        }
+    },
+    center: true,
     autoWidth: true,
     container: ".slider__all",
     swipeAngle: false,
     speed: 400,
 });
-
-

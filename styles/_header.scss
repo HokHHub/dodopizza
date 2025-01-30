@@ -13,10 +13,10 @@
         justify-content: space-between;
         align-items: center;
     }
-    
+
     .logo {
         display: flex;
-    
+
         &__img {
             cursor: pointer;
             margin-right: 14.67px;
@@ -24,18 +24,18 @@
             height: 44px;
             flex-shrink: 0;
         }
-    
+
         &__names {
             display: flex;
             flex-direction: column;
         }
     }
-    
+
     .names {
         &__title {
             cursor: pointer;
         }
-    
+
         &__subtitle {
             margin: 0;
             margin-top: 7px;
@@ -47,11 +47,11 @@
             line-height: normal;
         }
     }
-    
+
     .contact {
         display: flex;
         flex-direction: column;
-    
+
         &__number {
             margin: 0;
             color: #000;
@@ -61,7 +61,7 @@
             font-weight: 600;
             line-height: normal;
         }
-    
+
         &__text {
             margin: 0;
             color: #999;
@@ -72,11 +72,11 @@
             line-height: normal;
         }
     }
-    
+
     .navigation {
         display: flex;
         justify-content: space-between;
-    
+
         &__ul {
             padding: 0;
             margin: 0;
@@ -84,13 +84,13 @@
             gap: 24px;
         }
     }
-    
+
     .ul {
-        
+
         li {
             list-style-type: none;
         }
-    
+
         &__text {
             text-decoration: none;
             color: #000;
@@ -100,7 +100,7 @@
             font-weight: 400;
             line-height: normal;
             transition: 0.25s;
-    
+
             &:hover {
                 color: #F96900;
             }
@@ -108,3 +108,50 @@
     }
 }
 
+
+@media screen and (max-width: 850px) {
+    .header {
+        .contact {
+            display: none;
+        }
+
+        .navigation {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .header {
+        padding-top: 12px;
+        padding-bottom: 21px;
+
+        &__top {
+            margin: 0;  
+        }
+
+        &__bottom {
+            display: none;
+        }
+
+        .logo {
+            align-items: center;
+
+            &__img {
+                height: 23px;
+                width: 23px;
+                margin-right: 8px;
+            }
+
+            .names {
+                &__title {
+                    height: 23px;
+                }
+
+                &__subtitle {
+                    display: none;
+                }
+            }
+        }
+    }
+}

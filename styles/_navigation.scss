@@ -1,0 +1,56 @@
+.navigation {
+    display: none;
+    padding-top: 30px;
+    justify-content: space-between;
+
+    &__ul {
+        padding: 0;
+        margin: 0;
+        display: inline-flex;
+        gap: 8px;
+    }
+}
+
+.ul {
+
+    li {
+        cursor: pointer;
+        display: inline-flex;
+        padding: 6px 15px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        list-style-type: none;
+        border-radius: 100px;
+        background: #F3F3F7;
+        transition: 0.25s;
+
+        &:hover {
+            background: #FFF0E6;
+        }
+
+        &:hover .ul__text {
+            color: #D15700;
+        }
+    }
+
+    &__text {
+        white-space: nowrap;
+        text-decoration: none;
+        color: #464C55;
+        text-align: center;
+        font-family: 'Nunito';
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        transition: 0.25s;
+
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .navigation {
+        display: flex;
+    }
+}

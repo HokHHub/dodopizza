@@ -62,3 +62,50 @@
     }
 }
 
+@media screen and (max-width: 450px) {
+    .pizza {
+        padding: 0;
+
+        &__cards {
+            padding-top: 20px;
+        }
+
+        &__title {
+            display: none;
+        }
+
+        .card {
+            max-width: unset;
+            display: flex;
+
+            &__price {
+                display: none;
+            }
+
+            &__composition {
+                font-size: 12px;
+                height: unset;
+                margin: 0;
+                margin-bottom: 8px;
+            }
+
+            &__title {
+                margin: 0;
+                margin-bottom: 4px;
+                font-size: 18px;
+            }
+
+            &__img {
+                margin: 0;
+                margin-right: 7px;
+                width: 115px;
+                height: 115px;
+            }
+
+            &__mobile {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+}

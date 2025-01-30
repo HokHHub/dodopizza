@@ -1,0 +1,133 @@
+.popular {
+    &__title {
+        color: #000;
+        font-family: 'Nunito';
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    &__products {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .products {
+        margin: 0 auto;
+        max-width: 1280px;
+        position: relative;
+        overflow: scroll;
+        padding: 0 110px;
+
+        &::-webkit-scrollbar {
+            width: 0;
+        }
+
+        &__card {
+            cursor: pointer;
+            display: flex;
+            width: 250px;
+            height: 104px;
+            flex-shrink: 0;
+            border-radius: 10px;
+            background: #FFF;
+            box-shadow: 0px 6px 25px 0px rgba(6, 5, 50, 0.05);
+        }
+    }
+
+    .card {
+        &__img {
+            margin-top: 14px;
+            margin-bottom: 14px;
+            margin-left: 18px;
+            margin-right: 22px;
+            width: 76px;
+            height: 76px;
+            flex-shrink: 0;
+        }
+
+        &__info {
+            display: flex;
+            flex-direction: column;
+            margin-top: 29px;
+        }
+
+        &__name {
+            margin: 0;
+            margin-bottom: 4px;
+            color: #000;
+            font-family: 'Nunito';
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        &__price {
+            margin: 0;
+            color: #000;
+            font-family: 'Nunito';
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .popular {
+        &__title {
+            font-size: 20px;
+        }
+
+        .products {
+            &__card {
+                width: 240px;
+            }
+        }
+
+        .card {
+            &__price {
+                font-size: 15px;
+            }
+
+            &__img {
+                margin: 11px 8px 11px 18px;
+                width: 86px;
+                height: 86px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1160px) {
+    .popular {
+        .products {
+            padding: 0 40px;
+        }
+    } 
+}
+
+@media screen and (max-width: 900px) {
+    .popular {
+        .products {
+            padding: 0 30px;
+        }
+    } 
+}
+
+@media screen and (max-width: 450px) {
+    .popular {
+        &__title {
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .products {
+            padding: 0 16px;
+        }
+    } 
+}

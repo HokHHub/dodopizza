@@ -71,3 +71,49 @@
         }
     }
 }
+
+@media screen and (max-width: 450px) {
+    .desserts {
+        
+        &__cards {
+            font-size: 20px;
+            padding-top: 20px;
+        }
+
+        .card {
+            max-width: unset;
+            display: flex;
+            flex-direction: row;
+            height: unset;
+
+            &__price {
+                display: none;
+            }
+
+            &__composition {
+                font-size: 12px;
+                height: unset;
+                margin: 0;
+                margin-bottom: 8px;
+            }
+
+            &__title {
+                margin: 0;
+                margin-bottom: 4px;
+                font-size: 18px;
+            }
+
+            &__img {
+                margin: 0;
+                margin-right: 7px;
+                width: 115px;
+                height: 115px;
+            }
+
+            &__mobile {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+}

@@ -70,3 +70,11 @@
         opacity: 1;
     }
 }
+
+@media screen and (max-width: 450px) {
+    .button {
+        &_select {
+            font-size: 14px;
+        }
+    }
+}

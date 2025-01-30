@@ -10,6 +10,28 @@ export const data = {
     },
     ],
 
+    'popular': [{
+        'img': './images/popular/cesar.png',
+        'name': 'Цезарь',
+        'price': 445,
+    },
+    {
+        'img': './images/popular/losos.png',
+        'name': 'Нежный лосось',
+        'price': 495,
+    },
+    {
+        'img': './images/popular/twopizzas.jpg',
+        'name': '2 пиццы',
+        'price': 899,
+    },
+    {
+        'img': './images/popular/carbonara.png',
+        'name': 'Карбонара',
+        'price': 390,
+    }
+    ],
+
     'pizza': [{
         "name": "Пицца из половинок",
         "composition": "Соберите свою пиццу 35 см с двумя разными вкусами",

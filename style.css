@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Nunito";
-  src: url("/fonts/Nunito.ttf");
+  src: url("./fonts/Nunito.ttf");
 }
 * {
   box-sizing: border-box;
@@ -25,6 +25,45 @@ body {
   overflow: hidden;
 }
 
+.container3 {
+  position: relative;
+  overflow: scroll;
+  padding: 0 110px;
+}
+.container3::-webkit-scrollbar {
+  width: 0;
+}
+
+@media screen and (max-width: 1160px) {
+  .container {
+    padding: 0 40px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .container {
+    padding: 0 30px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .container {
+    padding: 0 16px;
+  }
+}
+@media screen and (max-width: 1160px) {
+  .container3 {
+    padding: 0 40px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .container3 {
+    padding: 0 30px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .container3 {
+    padding: 0 16px;
+  }
+}
 .header {
   padding-top: 25px;
   padding-bottom: 30px;
@@ -115,6 +154,40 @@ body {
   color: #F96900;
 }
 
+@media screen and (max-width: 850px) {
+  .header .contact {
+    display: none;
+  }
+  .header .navigation {
+    display: none;
+  }
+}
+@media screen and (max-width: 450px) {
+  .header {
+    padding-top: 12px;
+    padding-bottom: 21px;
+  }
+  .header__top {
+    margin: 0;
+  }
+  .header__bottom {
+    display: none;
+  }
+  .header .logo {
+    align-items: center;
+  }
+  .header .logo__img {
+    height: 23px;
+    width: 23px;
+    margin-right: 8px;
+  }
+  .header .logo .names__title {
+    height: 23px;
+  }
+  .header .logo .names__subtitle {
+    display: none;
+  }
+}
 .button {
   cursor: pointer;
   border-radius: 1000px;
@@ -181,6 +254,11 @@ body {
   opacity: 1;
 }
 
+@media screen and (max-width: 450px) {
+  .button_select {
+    font-size: 14px;
+  }
+}
 .pizza {
   padding-top: 70px;
 }
@@ -237,6 +315,45 @@ body {
   justify-content: space-between;
 }
 
+@media screen and (max-width: 450px) {
+  .pizza {
+    padding: 0;
+  }
+  .pizza__cards {
+    padding-top: 20px;
+  }
+  .pizza__title {
+    display: none;
+  }
+  .pizza .card {
+    max-width: unset;
+    display: flex;
+  }
+  .pizza .card__price {
+    display: none;
+  }
+  .pizza .card__composition {
+    font-size: 12px;
+    height: unset;
+    margin: 0;
+    margin-bottom: 8px;
+  }
+  .pizza .card__title {
+    margin: 0;
+    margin-bottom: 4px;
+    font-size: 18px;
+  }
+  .pizza .card__img {
+    margin: 0;
+    margin-right: 7px;
+    width: 115px;
+    height: 115px;
+  }
+  .pizza .card__mobile {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .combo__title {
   margin: 0;
   padding-top: 70px;
@@ -291,6 +408,42 @@ body {
   justify-content: space-between;
 }
 
+@media screen and (max-width: 450px) {
+  .combo__cards {
+    font-size: 20px;
+    padding-top: 20px;
+  }
+  .combo .card {
+    max-width: unset;
+    display: flex;
+    flex-direction: row;
+    height: unset;
+  }
+  .combo .card__price {
+    display: none;
+  }
+  .combo .card__composition {
+    font-size: 12px;
+    height: unset;
+    margin: 0;
+    margin-bottom: 8px;
+  }
+  .combo .card__title {
+    margin: 0;
+    margin-bottom: 4px;
+    font-size: 18px;
+  }
+  .combo .card__img {
+    margin: 0;
+    margin-right: 7px;
+    width: 115px;
+    height: 115px;
+  }
+  .combo .card__mobile {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .snacks {
   padding-top: 70px;
 }
@@ -357,6 +510,42 @@ body {
   margin-top: auto;
 }
 
+@media screen and (max-width: 450px) {
+  .snacks__cards {
+    font-size: 20px;
+    padding-top: 20px;
+  }
+  .snacks .card {
+    max-width: unset;
+    display: flex;
+    flex-direction: row;
+    height: unset;
+  }
+  .snacks .card__price {
+    display: none;
+  }
+  .snacks .card__composition {
+    font-size: 12px;
+    height: unset;
+    margin: 0;
+    margin-bottom: 8px;
+  }
+  .snacks .card__title {
+    margin: 0;
+    margin-bottom: 4px;
+    font-size: 18px;
+  }
+  .snacks .card__img {
+    margin: 0;
+    margin-right: 7px;
+    width: 115px;
+    height: 115px;
+  }
+  .snacks .card__mobile {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .desserts {
   padding-top: 70px;
 }
@@ -423,6 +612,42 @@ body {
   margin-top: auto;
 }
 
+@media screen and (max-width: 450px) {
+  .desserts__cards {
+    font-size: 20px;
+    padding-top: 20px;
+  }
+  .desserts .card {
+    max-width: unset;
+    display: flex;
+    flex-direction: row;
+    height: unset;
+  }
+  .desserts .card__price {
+    display: none;
+  }
+  .desserts .card__composition {
+    font-size: 12px;
+    height: unset;
+    margin: 0;
+    margin-bottom: 8px;
+  }
+  .desserts .card__title {
+    margin: 0;
+    margin-bottom: 4px;
+    font-size: 18px;
+  }
+  .desserts .card__img {
+    margin: 0;
+    margin-right: 7px;
+    width: 115px;
+    height: 115px;
+  }
+  .desserts .card__mobile {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .drinks {
   padding-top: 70px;
 }
@@ -440,6 +665,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+  justify-content: space-between;
   padding-bottom: 134px;
 }
 .drinks .card {
@@ -490,6 +716,52 @@ body {
   margin-top: auto;
 }
 
+@media screen and (max-width: 1190px) {
+  .drinks__cards {
+    justify-content: unset;
+  }
+}
+@media screen and (max-width: 740px) {
+  .drinks__cards {
+    padding-bottom: 40px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .drinks__cards {
+    font-size: 20px;
+    padding-top: 20px;
+  }
+  .drinks .card {
+    max-width: unset;
+    display: flex;
+    flex-direction: row;
+    height: unset;
+  }
+  .drinks .card__price {
+    display: none;
+  }
+  .drinks .card__composition {
+    font-size: 12px;
+    height: unset;
+    margin: 0;
+    margin-bottom: 8px;
+  }
+  .drinks .card__title {
+    margin: 0;
+    margin-bottom: 4px;
+    font-size: 18px;
+  }
+  .drinks .card__img {
+    margin: 0;
+    margin-right: 7px;
+    width: 115px;
+    height: 115px;
+  }
+  .drinks .card__mobile {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .footer {
   background-color: #464C55;
 }
@@ -532,8 +804,13 @@ body {
 .footer .column__text:hover {
   opacity: 0.9;
 }
-.footer .about {
+.footer__about {
   display: flex;
+  flex-direction: column;
+  margin-left: 38px;
+}
+.footer__about_mobile {
+  display: none;
   flex-direction: column;
   margin-left: 38px;
 }
@@ -577,6 +854,24 @@ body {
   font-weight: 400;
   line-height: normal;
   opacity: 0.9;
+}
+.footer .about__mail_mobile {
+  display: none;
+  margin: 0;
+  color: #FFF;
+  text-align: right;
+  font-family: "Nunito";
+  text-decoration: none;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  opacity: 0.9;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.footer__about_mobile {
+  display: none;
 }
 .footer .pizzerias {
   display: flex;
@@ -638,6 +933,14 @@ body {
   border: 0;
   height: 1px;
 }
+.footer__hr_mobile {
+  display: none;
+  margin: 0;
+  opacity: 0.2;
+  background: #FFF;
+  border: 0;
+  height: 1px;
+}
 .footer__help {
   display: flex;
   align-items: center;
@@ -646,7 +949,11 @@ body {
   padding-top: 40px;
   padding-bottom: 36px;
 }
+.footer .help__media_mobile {
+  display: none;
+}
 .footer .help__copyright {
+  white-space: nowrap;
   margin: 0;
   color: #FFF;
   font-family: "Nunito";
@@ -728,51 +1035,335 @@ body {
   background: rgba(255, 255, 255, 0.5);
 }
 
+.law {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 20px;
+}
+.law__information {
+  margin: 0;
+  color: #FFF;
+  font-family: "Nunito";
+  font-size: 16px;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  opacity: 0.7;
+  transition: 0.3s;
+}
+.law__information:hover {
+  opacity: 1;
+}
+.law__composition {
+  margin: 0;
+  color: #FFF;
+  font-family: "Nunito";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  text-decoration: none;
+  line-height: 22px;
+  opacity: 0.9;
+  transition: 0.3s;
+}
+.law__composition:hover {
+  opacity: 1;
+}
+.law__assist {
+  margin: 0;
+  color: #FFF;
+  font-family: "Nunito";
+  text-decoration: none;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  opacity: 0.7;
+  transition: 0.3s;
+}
+.law__assist:hover {
+  opacity: 1;
+}
+
+@media screen and (max-width: 1160px) {
+  .footer .column {
+    width: 160px;
+  }
+  .footer .column__texts {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .footer .column__title {
+    font-size: 16px;
+  }
+  .footer .column__text {
+    font-size: 16px;
+  }
+  .footer .about {
+    margin-left: 8px;
+  }
+  .footer .about__number {
+    margin-top: 9px;
+  }
+  .footer .about__call {
+    margin-bottom: 16px;
+  }
+  .footer .navigation {
+    padding-bottom: 53px;
+    gap: 0;
+  }
+  .footer .help__copyright {
+    margin-right: 22px;
+  }
+  .footer .help__assist {
+    margin-right: 33px;
+  }
+}
+@media screen and (max-width: 860px) {
+  .footer .media {
+    display: none;
+  }
+  .footer .help__media_mobile {
+    margin: 20px 0;
+    display: flex;
+  }
+  .footer .pizzerias {
+    display: none;
+  }
+  .footer .navigation {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .footer .help__assist {
+    margin-right: 0;
+  }
+  .footer .about {
+    align-items: flex-start;
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 740px) {
+  .footer__hr_mobile {
+    display: block;
+  }
+  .footer .navigation {
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
+  .footer .law {
+    display: flex;
+  }
+  .footer .help {
+    padding-top: 30px;
+    padding-bottom: 20px;
+  }
+  .footer .help__mainblock {
+    display: none;
+  }
+  .footer .about__mail {
+    display: none;
+  }
+  .footer .about__mail_mobile {
+    display: block;
+  }
+  .footer .about__call {
+    display: none;
+  }
+  .footer .about__number {
+    display: none;
+  }
+  .footer__about {
+    display: none;
+  }
+  .footer__about_mobile {
+    display: flex;
+  }
+}
+@media screen and (max-width: 450px) {
+  .footer .about__mail_mobile {
+    font-size: 16px;
+  }
+}
 .slider {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.slider__image {
-  position: absolute;
-  width: 1060px;
-  max-height: 300px;
-  height: 100%;
-  transition: 0.5s ease;
-}
-.slider__image-initial {
-  position: absolute;
-  width: 1060px;
-  max-height: 300px;
-  height: 100%;
-  transform: translateX(-1100px);
-}
-.slider__image-final {
-  position: absolute;
-  width: 1060px;
-  max-height: 300px;
-  height: 100%;
-  transform: translateX(1100px);
-}
-.slider__image-center {
-  width: 1060px;
-  max-height: 300px;
-  height: 100%;
-  transform: translateX(0);
-}
-.slider__dots {
-  position: absolute;
-  bottom: 80px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 10;
-}
-.slider__dot {
-  cursor: pointer;
-}
 .slider__all {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media screen and (max-width: 1080px) {
+  .slider__img {
+    width: 700px;
+    height: 198px;
+  }
+}
+@media screen and (max-width: 730px) {
+  .slider__img {
+    width: 500px;
+    height: 142px;
+  }
+}
+@media screen and (max-width: 530px) {
+  .slider__img {
+    width: 250px;
+    height: 93px;
+  }
+}
+.popular__title {
+  color: #000;
+  font-family: "Nunito";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.popular__products {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.popular .products {
+  margin: 0 auto;
+  max-width: 1280px;
+  position: relative;
+  overflow: scroll;
+  padding: 0 110px;
+}
+.popular .products::-webkit-scrollbar {
+  width: 0;
+}
+.popular .products__card {
+  cursor: pointer;
+  display: flex;
+  width: 250px;
+  height: 104px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: #FFF;
+  box-shadow: 0px 6px 25px 0px rgba(6, 5, 50, 0.05);
+}
+.popular .card__img {
+  margin-top: 14px;
+  margin-bottom: 14px;
+  margin-left: 18px;
+  margin-right: 22px;
+  width: 76px;
+  height: 76px;
+  flex-shrink: 0;
+}
+.popular .card__info {
+  display: flex;
+  flex-direction: column;
+  margin-top: 29px;
+}
+.popular .card__name {
+  margin: 0;
+  margin-bottom: 4px;
+  color: #000;
+  font-family: "Nunito";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.popular .card__price {
+  margin: 0;
+  color: #000;
+  font-family: "Nunito";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+@media screen and (max-width: 450px) {
+  .popular__title {
+    font-size: 20px;
+  }
+  .popular .products__card {
+    width: 240px;
+  }
+  .popular .card__price {
+    font-size: 15px;
+  }
+  .popular .card__img {
+    margin: 11px 8px 11px 18px;
+    width: 86px;
+    height: 86px;
+  }
+}
+@media screen and (max-width: 1160px) {
+  .popular .products {
+    padding: 0 40px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .popular .products {
+    padding: 0 30px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .popular__title {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  .popular .products {
+    padding: 0 16px;
+  }
+}
+.navigation {
+  display: none;
+  padding-top: 30px;
+  justify-content: space-between;
+}
+.navigation__ul {
+  padding: 0;
+  margin: 0;
+  display: inline-flex;
+  gap: 8px;
+}
+
+.ul li {
+  cursor: pointer;
+  display: inline-flex;
+  padding: 6px 15px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  list-style-type: none;
+  border-radius: 100px;
+  background: #F3F3F7;
+  transition: 0.25s;
+}
+.ul li:hover {
+  background: #FFF0E6;
+}
+.ul li:hover .ul__text {
+  color: #D15700;
+}
+.ul__text {
+  white-space: nowrap;
+  text-decoration: none;
+  color: #464C55;
+  text-align: center;
+  font-family: "Nunito";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  transition: 0.25s;
+}
+
+@media screen and (max-width: 850px) {
+  .navigation {
+    display: flex;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -8,3 +8,49 @@
     position: relative;
     overflow: hidden;
 }
+
+.container3 {
+    position: relative;
+    overflow: scroll;
+    padding: 0 110px;
+
+    &::-webkit-scrollbar {
+        width: 0;
+    }
+}
+
+@media screen and (max-width: 1160px) {
+    .container {
+        padding: 0 40px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .container {
+        padding: 0 30px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .container {
+        padding: 0 16px;
+    }
+}
+
+@media screen and (max-width: 1160px) {
+    .container3 {
+        padding: 0 40px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .container3 {
+        padding: 0 30px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .container3 {
+        padding: 0 16px;
+    }
+}
