@@ -765,7 +765,7 @@ body {
 .footer {
   background-color: #464C55;
 }
-.footer__navigation {
+.footer .navigation {
   padding-top: 50px;
   padding-bottom: 93px;
   display: flex;
