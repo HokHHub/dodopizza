@@ -1377,6 +1377,7 @@ body {
   transform: translate(-50%, -50%);
   box-shadow: 0px 6px 55px 0px rgba(0, 0, 0, 0.1);
   flex-shrink: 0;
+  display: none;
   transition: 150ms;
 }
 .modal__close {
