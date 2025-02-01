@@ -1,5 +1,4 @@
 import { data } from './data.js'
-// import { tns } from "./node_modules/tiny-slider/src/tiny-slider.js"
 import { tns } from "./tiny-slider/src/tiny-slider.js"
 
 let pizzaCards = document.querySelector('.pizza__cards')
@@ -9,6 +8,7 @@ let dessertsCards = document.querySelector('.desserts__cards')
 let drinksCards = document.querySelector('.drinks__cards')
 let popularCards = document.querySelector('.popular__products')
 let yearNow = document.querySelector('.help__copyright')
+let modal = document.querySelector('.modal')
 
 function RenderPopular() {
     for (let index = 0; index < data.popular.length; index++) {
@@ -21,7 +21,6 @@ function RenderPopular() {
                             <p class="card__price">от ${data.popular[index].price} ₽</p>
                         </div>
                         `
-
         popularCards.appendChild(card)
     }
 }
@@ -42,6 +41,9 @@ function RenderPizzas() {
                             <button class="card__button button_select">Выбрать</button>
                         </div>
                         </div>`
+        toOpenModal(card.querySelector('button.card__button'))
+
+
 
         pizzaCards.appendChild(card)
     }
@@ -63,6 +65,9 @@ function RenderCombo() {
                             <button class="card__button button_select">Выбрать</button>
                         </div>
                         </div>`
+        toOpenModal(card.querySelector('button.card__button'))
+
+
 
         comboCards.appendChild(card)
     }
@@ -84,6 +89,10 @@ function RenderSnacks() {
                         </div>
                         </div>
                         `
+        toOpenModal(card.querySelector('button.card__button'))
+
+
+
 
         snacksCards.appendChild(card)
     }
@@ -104,6 +113,10 @@ function RenderDesserts() {
                             <button class="card__button button_select">Выбрать</button>
                         </div>
                         </div>`
+        toOpenModal(card.querySelector('button.card__button'))
+
+
+
 
         dessertsCards.appendChild(card)
     }
@@ -124,6 +137,8 @@ function RenderDrinks() {
                             <button class="card__button button_select">Выбрать</button>
                         </div>
                         </div>`
+        toOpenModal(card.querySelector('button.card__button'))
+
 
         drinksCards.appendChild(card)
     }
@@ -161,3 +176,14 @@ let slider = tns({
     swipeAngle: false,
     speed: 400,
 });
+
+function toOpenModal(button) {
+    button.addEventListener('click', () => {
+        console.log('!click to open modal');
+        // modal.style.display = 'block'
+        modal.style.opacity = 1
+        modal.style.left = '50%'
+        modal.style.top = '50%'
+        document.style.opacity = 0.2
+    })
+}

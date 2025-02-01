@@ -1368,16 +1368,16 @@ body {
   }
 }
 .modal {
+  opacity: 0;
   width: 920px;
   height: 610px;
   border-radius: 20px;
   background: #FFF;
-  position: absolute;
-  top: 50%;
-  left: 50%;
+  position: fixed;
   transform: translate(-50%, -50%);
   box-shadow: 0px 6px 55px 0px rgba(0, 0, 0, 0.1);
   flex-shrink: 0;
+  transition: 150ms;
 }
 .modal__close {
   cursor: pointer;
@@ -1414,6 +1414,7 @@ body {
 }
 .modal .card__main-block {
   height: 508px;
+  border-radius: 0 20px 0 0;
   overflow: scroll;
   background: #FCFCFC;
   padding: 0 30px;
