@@ -1366,4 +1366,244 @@ body {
   .navigation {
     display: flex;
   }
+}
+.modal {
+  width: 920px;
+  height: 610px;
+  border-radius: 20px;
+  background: #FFF;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 6px 55px 0px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+.modal__close {
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: -50px;
+}
+.modal__card {
+  display: flex;
+}
+.modal__buy {
+  padding: 24px 30px 30px;
+  position: absolute;
+  background: #FCFCFC;
+}
+.modal__buybtn {
+  cursor: pointer;
+  width: 320px;
+  border: 0;
+  height: 48px;
+  border-radius: 1000px;
+  background: #F96900;
+  color: #FFF;
+  text-align: center;
+  font-family: "Nunito";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  flex-shrink: 0;
+}
+.modal__main {
+  position: relative;
+}
+.modal .card__main-block {
+  height: 508px;
+  overflow: scroll;
+  background: #FCFCFC;
+  padding: 0 30px;
+  padding-bottom: 14.5px;
+}
+.modal .card__main-block::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+.modal .card__img {
+  width: 372px;
+  height: 372px;
+  margin-top: 124px;
+  margin-left: 93px;
+  margin-right: 75px;
+  flex-shrink: 0;
+}
+.modal .card__title {
+  margin: 0;
+  margin-top: 30px;
+  color: #000;
+  font-family: "Nunito";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.modal .card__selected {
+  margin: 0;
+  margin-top: 3px;
+  margin-bottom: 11px;
+  color: #73798C;
+  font-family: "Nunito";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.modal .card__composition {
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  color: #4D4D4D;
+  font-family: Arial;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.modal .card__candel {
+  margin-left: 3px;
+  color: #4D4D4D;
+  font-family: Arial;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+.modal .card__delete {
+  cursor: pointer;
+  margin-left: 3px;
+}
+.modal .card__sizes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 320px;
+  border-radius: 100px;
+  height: 32px;
+  background: #F3F3F7;
+  margin-bottom: 12px;
+}
+.modal .card__input {
+  display: none;
+}
+.modal .card__input:checked + .card__select {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 107px;
+  height: 28px;
+  border-radius: 100px;
+  background: #FFF;
+  box-shadow: 0px 3px 15px 0px rgba(6, 5, 50, 0.05);
+}
+.modal .card__select {
+  color: #000;
+  width: 104px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: "Nunito";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.modal .card__dough {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 320px;
+  border-radius: 100px;
+  height: 32px;
+  background: #F3F3F7;
+}
+.modal .card__input:checked + .card__choose {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 28px;
+  border-radius: 100px;
+  background: #FFF;
+  box-shadow: 0px 3px 15px 0px rgba(6, 5, 50, 0.05);
+}
+.modal .card__choose {
+  color: #000;
+  width: 158px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: "Nunito";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.modal .card__textadd {
+  margin-top: 17px;
+  margin-bottom: 11px;
+  color: #000;
+  font-family: "Nunito";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.modal .card__supplements {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.modal .card__additionally {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100px;
+  height: 150px;
+  border-radius: 20px;
+  background: #FFF;
+  box-shadow: 0px 6px 55px 0px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+.modal .additionally__img {
+  margin-left: 8px;
+  margin-right: 8px;
+  margin-top: 3px;
+}
+.modal .additionally__name {
+  margin-top: -2px;
+  margin-bottom: 20px;
+  color: #000;
+  text-align: center;
+  font-family: "Nunito";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.modal .additionally__cost {
+  margin: 0;
+  margin-bottom: 10px;
+  color: #000;
+  text-align: center;
+  font-family: "Nunito";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
 }/*# sourceMappingURL=style.css.map */

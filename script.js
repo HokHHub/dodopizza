@@ -1,5 +1,6 @@
 import { data } from './data.js'
-import { tns } from "./node_modules/tiny-slider/src/tiny-slider.js"
+// import { tns } from "./node_modules/tiny-slider/src/tiny-slider.js"
+import { tns } from "./tiny-slider/src/tiny-slider.js"
 
 let pizzaCards = document.querySelector('.pizza__cards')
 let comboCards = document.querySelector('.combo__cards')
