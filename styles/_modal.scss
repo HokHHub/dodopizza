@@ -1,5 +1,17 @@
-.modal {
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    visibility: visible;
     opacity: 0;
+    z-index: -1;
+    transition: opacity 150ms ease;
+}
+
+.modal {
     width: 920px;
     height: 610px;
     border-radius: 20px;
@@ -8,8 +20,49 @@
     transform: translate(-50%, -50%);
     box-shadow: 0px 6px 55px 0px rgba(0, 0, 0, 0.10);
     flex-shrink: 0;
-    display: none;
+    left: 50%;
+    top: 50%;
+    visibility: hidden;
+    z-index: 10;
+    opacity: 0;
     transition: 150ms;
+
+    &__allimg {
+        position: relative;
+        max-width: 540px;
+        width: 100%;
+    }
+
+    &__img {
+        width: 352px;
+        height: 352px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -37%);
+        flex-shrink: 0;
+    }
+
+    &__imgSmall {
+        width: 342px;
+        height: 342px;
+        transform: translate(-50%, -37%);
+        flex-shrink: 0;
+    }
+
+    &__imgMedium {
+        width: 372px;
+        height: 372px;
+        transform: translate(-50%, -37%);
+        flex-shrink: 0;
+    }
+
+    &__imgBig {
+        width: 402px;
+        height: 402px;
+        transform: translate(-50%, -37%);
+        flex-shrink: 0;
+    }
 
     &__close {
         cursor: pointer;
@@ -24,9 +77,47 @@
 
     &__buy {
         padding: 24px 30px 30px;
+        border-radius: 0 0 20px 0;
         position: absolute;
         background: #FCFCFC;
 
+    }
+
+    &__title {
+        margin: 0;
+        margin-top: 30px;
+        color: #000;
+        font-family: 'Nunito';
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+
+    &__selected {
+        margin: 0;
+        margin-top: 3px;
+        margin-bottom: 11px;
+        color: #73798C;
+        font-family: 'Nunito';
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    &__composition {
+        margin-bottom: 20px;
+        white-space: pre-wrap;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        color: #4D4D4D;
+        font-family: Arial;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
     }
 
     &__buybtn {
@@ -59,60 +150,16 @@
             background: #FCFCFC;
             padding: 0 30px;
             padding-bottom: 14.5px;
-    
+
             &::-webkit-scrollbar {
                 display: none;
                 width: 0;
                 height: 0;
             }
         }
-    
-        &__img {
-            width: 372px;
-            height: 372px;
-            margin-top: 124px;
-            margin-left: 93px;
-            margin-right: 75px;
-            flex-shrink: 0;
-        }
-    
-        &__title {
-            margin: 0;
-            margin-top: 30px;
-            color: #000;
-            font-family: 'Nunito';
-            font-size: 24px;
-            font-style: normal;
-            font-weight: 600;
-            line-height: normal;
-        }
-    
-        &__selected {
-            margin: 0;
-            margin-top: 3px;
-            margin-bottom: 11px;
-            color: #73798C;
-            font-family: 'Nunito';
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
-        }
-    
-        &__composition {
-            margin-bottom: 20px;
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            color: #4D4D4D;
-            font-family: Arial;
-            font-size: 13px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
-        }
-    
+
         &__candel {
+            display: flex;
             margin-left: 3px;
             color: #4D4D4D;
             font-family: Arial;
@@ -122,12 +169,25 @@
             line-height: normal;
             text-decoration: underline dotted;
         }
-    
+
+        &__candelDel {
+            display: flex;
+            margin-left: 3px;
+            color: #4D4D4D;
+            font-family: Arial;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            text-decoration: underline dotted;
+            text-decoration: line-through;
+        }
+
         &__delete {
             cursor: pointer;
             margin-left: 3px;
         }
-    
+
         &__sizes {
             display: flex;
             align-items: center;
@@ -138,11 +198,11 @@
             background: #F3F3F7;
             margin-bottom: 12px;
         }
-    
+
         &__input {
             display: none;
         }
-    
+
         &__input:checked+.card__select {
             display: flex;
             align-items: center;
@@ -153,7 +213,7 @@
             background: #FFF;
             box-shadow: 0px 3px 15px 0px rgba(6, 5, 50, 0.05);
         }
-    
+
         &__select {
             color: #000;
             width: 104px;
@@ -170,7 +230,7 @@
             transition: 0.3s;
             cursor: pointer;
         }
-    
+
         &__dough {
             display: flex;
             align-items: center;
@@ -180,7 +240,7 @@
             height: 32px;
             background: #F3F3F7;
         }
-    
+
         &__input:checked+.card__choose {
             display: flex;
             align-items: center;
@@ -190,7 +250,7 @@
             background: #FFF;
             box-shadow: 0px 3px 15px 0px rgba(6, 5, 50, 0.05);
         }
-    
+
         &__choose {
             color: #000;
             width: 158px;
@@ -207,7 +267,7 @@
             transition: 0.3s;
             cursor: pointer;
         }
-    
+
         &__textadd {
             margin-top: 17px;
             margin-bottom: 11px;
@@ -218,37 +278,52 @@
             font-weight: 600;
             line-height: normal;
         }
-    
+
         &__supplements {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
         }
-    
+
         &__additionally {
+            cursor: pointer;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100px;
+            height: 150px;
+            border-radius: 12px;
+            background: #FFF;
+            box-shadow: 0px 6px 55px 0px rgba(0, 0, 0, 0.10);
+            flex-shrink: 0;
+        }
+
+        &__additionallyActive {
             cursor: pointer;
             display: flex;
             flex-direction: column;
             align-items: center;
             width: 100px;
             height: 150px;
-            border-radius: 20px;
+            border: 1px solid #F96900;
+            border-radius: 12px;
             background: #FFF;
-            box-shadow: 0px 6px 55px 0px rgba(0, 0, 0, 0.10);
+            // box-shadow: 0px 6px 55px 0px rgba(0, 0, 0, 0.10);
             flex-shrink: 0;
         }
     }
-    
+
     .additionally {
         &__img {
             margin-left: 8px;
             margin-right: 8px;
             margin-top: 3px;
         }
-    
+
         &__name {
             margin-top: -2px;
-            margin-bottom: 20px;
+            margin-bottom: auto;
             color: #000;
             text-align: center;
             font-family: 'Nunito';
@@ -257,7 +332,7 @@
             font-weight: 400;
             line-height: normal;
         }
-    
+
         &__cost {
             margin: 0;
             margin-bottom: 10px;
@@ -269,6 +344,16 @@
             font-weight: 600;
             line-height: normal;
         }
+
+        &__svg {
+            display: none;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        &__svgActive {
+            display: block;
+        }
     }
 }
-

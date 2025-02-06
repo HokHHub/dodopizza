@@ -1367,8 +1367,20 @@ body {
     display: flex;
   }
 }
-.modal {
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  visibility: visible;
   opacity: 0;
+  z-index: -1;
+  transition: opacity 150ms ease;
+}
+
+.modal {
   width: 920px;
   height: 610px;
   border-radius: 20px;
@@ -1377,8 +1389,44 @@ body {
   transform: translate(-50%, -50%);
   box-shadow: 0px 6px 55px 0px rgba(0, 0, 0, 0.1);
   flex-shrink: 0;
-  display: none;
+  left: 50%;
+  top: 50%;
+  visibility: hidden;
+  z-index: 10;
+  opacity: 0;
   transition: 150ms;
+}
+.modal__allimg {
+  position: relative;
+  max-width: 540px;
+  width: 100%;
+}
+.modal__img {
+  width: 352px;
+  height: 352px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -37%);
+  flex-shrink: 0;
+}
+.modal__imgSmall {
+  width: 342px;
+  height: 342px;
+  transform: translate(-50%, -37%);
+  flex-shrink: 0;
+}
+.modal__imgMedium {
+  width: 372px;
+  height: 372px;
+  transform: translate(-50%, -37%);
+  flex-shrink: 0;
+}
+.modal__imgBig {
+  width: 402px;
+  height: 402px;
+  transform: translate(-50%, -37%);
+  flex-shrink: 0;
 }
 .modal__close {
   cursor: pointer;
@@ -1391,8 +1439,43 @@ body {
 }
 .modal__buy {
   padding: 24px 30px 30px;
+  border-radius: 0 0 20px 0;
   position: absolute;
   background: #FCFCFC;
+}
+.modal__title {
+  margin: 0;
+  margin-top: 30px;
+  color: #000;
+  font-family: "Nunito";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.modal__selected {
+  margin: 0;
+  margin-top: 3px;
+  margin-bottom: 11px;
+  color: #73798C;
+  font-family: "Nunito";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.modal__composition {
+  margin-bottom: 20px;
+  white-space: pre-wrap;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  color: #4D4D4D;
+  font-family: Arial;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 .modal__buybtn {
   cursor: pointer;
@@ -1426,48 +1509,8 @@ body {
   width: 0;
   height: 0;
 }
-.modal .card__img {
-  width: 372px;
-  height: 372px;
-  margin-top: 124px;
-  margin-left: 93px;
-  margin-right: 75px;
-  flex-shrink: 0;
-}
-.modal .card__title {
-  margin: 0;
-  margin-top: 30px;
-  color: #000;
-  font-family: "Nunito";
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-}
-.modal .card__selected {
-  margin: 0;
-  margin-top: 3px;
-  margin-bottom: 11px;
-  color: #73798C;
-  font-family: "Nunito";
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-.modal .card__composition {
-  margin-bottom: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  color: #4D4D4D;
-  font-family: Arial;
-  font-size: 13px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
 .modal .card__candel {
+  display: flex;
   margin-left: 3px;
   color: #4D4D4D;
   font-family: Arial;
@@ -1477,6 +1520,19 @@ body {
   line-height: normal;
   -webkit-text-decoration: underline dotted;
           text-decoration: underline dotted;
+}
+.modal .card__candelDel {
+  display: flex;
+  margin-left: 3px;
+  color: #4D4D4D;
+  font-family: Arial;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+  text-decoration: line-through;
 }
 .modal .card__delete {
   cursor: pointer;
@@ -1572,14 +1628,27 @@ body {
 }
 .modal .card__additionally {
   cursor: pointer;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100px;
   height: 150px;
-  border-radius: 20px;
+  border-radius: 12px;
   background: #FFF;
   box-shadow: 0px 6px 55px 0px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+.modal .card__additionallyActive {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100px;
+  height: 150px;
+  border: 1px solid #F96900;
+  border-radius: 12px;
+  background: #FFF;
   flex-shrink: 0;
 }
 .modal .additionally__img {
@@ -1589,7 +1658,7 @@ body {
 }
 .modal .additionally__name {
   margin-top: -2px;
-  margin-bottom: 20px;
+  margin-bottom: auto;
   color: #000;
   text-align: center;
   font-family: "Nunito";
@@ -1608,4 +1677,13 @@ body {
   font-style: normal;
   font-weight: 600;
   line-height: normal;
+}
+.modal .additionally__svg {
+  display: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.modal .additionally__svgActive {
+  display: block;
 }/*# sourceMappingURL=style.css.map */
